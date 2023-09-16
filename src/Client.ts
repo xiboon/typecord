@@ -14,7 +14,7 @@ export class Client extends EventEmitter {
         this.port = options.port;
         this.publicKey = options.publicKey;
         this.endpoint = options.endpoint || '/interactions';
-        this.http = fastify();
+        this.http = fastify({ logger: true });
     }
     async start() {
         this.http.post(
@@ -38,6 +38,7 @@ export class Client extends EventEmitter {
                         break;
                     case InteractionType.ApplicationCommand:
                         this.emit('command', commandType(req.body), reply);
+                        break;
                 }
             }
         );

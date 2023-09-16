@@ -90,7 +90,7 @@ export class SlashCommandOptions {
         if (!option) return;
         if (!this.resolved?.users) return;
         if (
-            option.type !== ApplicationCommandOptionType.User ||
+            option.type !== ApplicationCommandOptionType.User &&
             option.type !== ApplicationCommandOptionType.Mentionable
         )
             throw new TypeError(`Option '${name}' is not a user`);
