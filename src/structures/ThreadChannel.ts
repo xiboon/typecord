@@ -1,5 +1,5 @@
 import { APIThreadChannel, APIThreadMetadata } from 'discord-api-types/v10';
-import { TextChannel } from '../';
+import { TextChannel } from '../index.js';
 
 /**
  * A thread channel class.

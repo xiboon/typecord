@@ -1,6 +1,6 @@
 import { APIGuildChannel } from 'discord-api-types/v10';
-import { Guild } from './Guild';
-import { Channel } from './Channel';
+import { Guild } from './Guild.js';
+import { Channel } from './Channel.js';
 
 /**
  * A guild channel class.

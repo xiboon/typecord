@@ -1,4 +1,4 @@
-import { Guild, User } from '../';
+import { Guild, User } from '../index.js';
 
 import { APIGuildMember } from 'discord-api-types/v10';
 

@@ -1,5 +1,5 @@
 import { APIRole } from 'discord-api-types/v10';
-import { Permissions } from '../util/Permissions';
+import { Permissions } from '../util/Permissions.js';
 
 /**
  * Role class

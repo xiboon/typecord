@@ -10,7 +10,7 @@ import {
     GuildPremiumTier,
     GuildVerificationLevel
 } from 'discord-api-types/v10';
-import { Permissions } from '../util/Permissions';
+import { Permissions } from '../util/Permissions.js';
 import { Emoji } from './Emoji.js';
 import { Role } from './Role.js';
 

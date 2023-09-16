@@ -1,5 +1,5 @@
 import { APIDMChannel, APIGroupDMChannel, ChannelType } from 'discord-api-types/v10';
-import { User } from '..';
+import { User } from '../index.js';
 import { Channel } from './Channel.js';
 
 /**

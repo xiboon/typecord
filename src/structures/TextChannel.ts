@@ -1,5 +1,5 @@
 import { APIGuildVoiceChannel, APITextChannel, ChannelType } from 'discord-api-types/v10';
-import { GuildChannel } from './GuildChannel';
+import { GuildChannel } from './GuildChannel.js';
 
 /**
  * A text channel class.
