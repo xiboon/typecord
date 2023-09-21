@@ -1,6 +1,6 @@
 {
-  "name": "discord-http",
-  "version": "0.1.0",
+  "name": "typecord",
+  "version": "0.2.0",
   "description": "A discord HTTP Interaction library for bots.",
   "main": "dist/index.js",
   "scripts": {

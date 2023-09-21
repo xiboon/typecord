@@ -9,6 +9,7 @@
         "skipLibCheck": true,
         "forceConsistentCasingInFileNames": true,
         "sourceMap": true,
+        "declaration": true,
         "removeComments": true,
         "outDir": "dist",
         "baseUrl": "src"

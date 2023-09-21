@@ -36,7 +36,7 @@ export class Member {
     pending: boolean;
     // roles: MemberRoleManager;
     avatar?: string | null;
-    constructor(data: APIGuildMember, guild: Guild) {
+    constructor(data: APIGuildMember, guild?: Guild) {
         this.guild = guild;
         if (data.user) this.user = new User(data.user);
         this.nick = data.nick;
