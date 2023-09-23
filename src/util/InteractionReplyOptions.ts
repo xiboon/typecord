@@ -1,6 +1,7 @@
 import {
     APIAllowedMentions,
     APIEmbed,
+    APIMessageComponent,
     AllowedMentionsTypes
 } from 'discord-api-types/v10';
 
@@ -9,6 +10,8 @@ export interface RawReplyOptions {
     embeds?: APIEmbed[];
     allowedMentions?: RawAllowedMentions;
     ephemeral?: boolean;
+    components?: APIMessageComponent[];
+    tts?: boolean;
 }
 export interface RawAllowedMentions {
     parse?: AllowedMentionsTypes[];
@@ -29,12 +32,17 @@ export class AllowedMentions {
     }
 }
 export class InteractionReplyOptions {
-    content: string;
-    embeds: APIEmbed[];
-    allowed_mentions: APIAllowedMentions;
+    content?: string;
+    embeds?: APIEmbed[];
+    allowed_mentions?: APIAllowedMentions;
+    components?: APIMessageComponent[];
+    tts?: boolean;
     constructor(data: RawReplyOptions) {
         this.content = data.content;
         this.embeds = data.embeds;
-        this.allowed_mentions = new AllowedMentions(data.allowedMentions);
+        this.components = data.components;
+        if (data.allowedMentions)
+            this.allowed_mentions = new AllowedMentions(data.allowedMentions);
+        this.tts = data.tts;
     }
 }

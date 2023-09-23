@@ -4,11 +4,11 @@ import {
     ComponentType,
     InteractionResponseType
 } from 'discord-api-types/v10';
-import { Interaction } from './Interaction';
+import { Interaction } from './Interaction.js';
 import {
     RawReplyOptions,
     InteractionReplyOptions
-} from '../util/InteractionReplyOptions';
+} from '../util/InteractionReplyOptions.js';
 import { FastifyReply } from 'fastify';
 
 export class MessageComponentInteraction extends Interaction {

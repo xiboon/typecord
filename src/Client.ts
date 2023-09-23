@@ -4,6 +4,7 @@ import { ClientOptions } from './types/ClientOptions';
 import { APIInteraction, InteractionType } from 'discord-api-types/v10';
 import { verifyRequest } from './util/verifyRequest.js';
 import { commandType } from './util/commandType.js';
+import { componentType } from './util/componentType.js';
 export class Client extends EventEmitter {
     http: FastifyInstance;
     port: number;
@@ -14,7 +15,7 @@ export class Client extends EventEmitter {
         this.port = options.port;
         this.publicKey = options.publicKey;
         this.endpoint = options.endpoint || '/interactions';
-        this.http = fastify({ logger: true });
+        this.http = fastify({ logger: { level: 'error' } });
     }
     async start() {
         this.http.post(
@@ -37,8 +38,10 @@ export class Client extends EventEmitter {
                         this.emit('ping', req.body);
                         break;
                     case InteractionType.ApplicationCommand:
-                        this.emit('command', commandType(req.body), reply);
+                        this.emit('command', commandType(req.body, reply));
                         break;
+                    case InteractionType.MessageComponent:
+                        this.emit('messageComponent', componentType(req.body, reply));
                 }
             }
         );

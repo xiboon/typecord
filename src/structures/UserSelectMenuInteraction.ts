@@ -1,8 +1,9 @@
 import { FastifyReply } from 'fastify';
-import { SelectMenuInteraction } from './SelectMenuInteraction';
+import { StringSelectMenuInteraction } from './StringSelectMenuInteraction.js';
 import {
     APIMessageChannelSelectInteractionData,
     APIMessageComponentSelectMenuInteraction,
+    APIMessageMentionableSelectInteractionData,
     APIMessageRoleSelectInteractionData,
     APIMessageUserSelectInteractionData,
     APIUser
@@ -12,10 +13,11 @@ export interface APIAutofillSelectMenuInteraction<
         | APIMessageUserSelectInteractionData
         | APIMessageChannelSelectInteractionData
         | APIMessageRoleSelectInteractionData
+        | APIMessageMentionableSelectInteractionData
 > extends APIMessageComponentSelectMenuInteraction {
     data: T;
 }
-export class UserSelectMenuInteraction extends SelectMenuInteraction {
+export class UserSelectMenuInteraction extends StringSelectMenuInteraction {
     values: APIUser[];
     constructor(
         data: APIAutofillSelectMenuInteraction<APIMessageUserSelectInteractionData>,
