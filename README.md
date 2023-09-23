@@ -13,4 +13,5 @@ Keep in mind, typecord only handles the HTTP interaction part of the bot. You ma
 - documentation
 - attachment support
 - other interaction types
-- caching (maybe?)
+- add all imports to index.ts
+- create-typecord-app cli

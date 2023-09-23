@@ -1,3 +1,4 @@
+export * from './Client.js';
 export * from './structures/Attachment.js';
 export * from './structures/ButtonInteraction.js';
 export * from './structures/Channel.js';
@@ -11,6 +12,8 @@ export * from './structures/Interaction.js';
 export * from './structures/Member.js';
 export * from './structures/MentionableSelectMenuInteraction.js';
 export * from './structures/MessageComponentInteraction.js';
+export * from './structures/ModalComponent.js';
+export * from './structures/ModalInteraction.js';
 export * from './structures/Role.js';
 export * from './structures/RoleSelectMenuInteraction.js';
 export * from './structures/SlashCommandInteraction.js';
@@ -22,4 +25,3 @@ export * from './structures/ThreadChannel.js';
 export * from './structures/User.js';
 export * from './structures/UserSelectMenuInteraction.js';
 export * from './structures/VoiceChannel.js';
-export * from './Client.js';

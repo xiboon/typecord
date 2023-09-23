@@ -5,6 +5,7 @@ import { APIInteraction, InteractionType } from 'discord-api-types/v10';
 import { verifyRequest } from './util/verifyRequest.js';
 import { commandType } from './util/commandType.js';
 import { componentType } from './util/componentType.js';
+import { ModalInteraction } from './structures/ModalInteraction.js';
 export class Client extends EventEmitter {
     http: FastifyInstance;
     port: number;
@@ -42,6 +43,9 @@ export class Client extends EventEmitter {
                         break;
                     case InteractionType.MessageComponent:
                         this.emit('messageComponent', componentType(req.body, reply));
+                        break;
+                    case InteractionType.ModalSubmit:
+                        this.emit('modalSubmit', new ModalInteraction(req.body, reply));
                 }
             }
         );
