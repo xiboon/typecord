@@ -1,5 +1,5 @@
 # Typecord
-A HTTP Interacttion library for bots using the Discord API.
+A HTTP Interaction library for bots using the Discord API.
 
 ## Installation
 ```bash

@@ -1,8 +1,9 @@
 {
   "name": "typecord",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "A discord HTTP Interaction library for bots.",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -22,5 +23,8 @@
     "eslint-plugin-prettier": "^5.0.0",
     "prettier": "^3.0.3"
   },
-  "type": "module"
+  "type": "module",
+  "repository": {
+    "url": "git+https://github.com/xiboon/typecord.git"
+  }
 }
