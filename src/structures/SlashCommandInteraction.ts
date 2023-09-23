@@ -1,6 +1,6 @@
 import {
     APIChatInputApplicationCommandInteraction,
-    APIModalInteractionResponse,
+    APIModalInteractionResponseCallbackData,
     InteractionResponseType
 } from 'discord-api-types/v10';
 import { CommandInteraction } from './CommandInteraction.js';
@@ -31,7 +31,7 @@ export class SlashCommandInteraction extends CommandInteraction {
             type: InteractionResponseType.DeferredChannelMessageWithSource
         });
     }
-    showModal(modal: APIModalInteractionResponse) {
+    showModal(modal: APIModalInteractionResponseCallbackData) {
         this._reply.send({
             type: InteractionResponseType.Modal,
             data: modal

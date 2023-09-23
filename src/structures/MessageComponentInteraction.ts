@@ -1,6 +1,6 @@
 import {
     APIMessageComponentInteraction,
-    APIModalInteractionResponse,
+    APIModalInteractionResponseCallbackData,
     ComponentType,
     InteractionResponseType
 } from 'discord-api-types/v10';
@@ -33,7 +33,8 @@ export class MessageComponentInteraction extends Interaction {
             type: InteractionResponseType.DeferredMessageUpdate
         });
     }
-    showModal(modal: APIModalInteractionResponse) {
+
+    showModal(modal: APIModalInteractionResponseCallbackData) {
         this._reply.send({
             type: InteractionResponseType.Modal,
             data: modal
