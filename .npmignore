@@ -1,0 +1,6 @@
+src/
+.eslintrc.json
+.eslintignore
+.editorconfig
+.gitignore
+.prettierrc.json
