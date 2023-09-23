@@ -25,3 +25,13 @@ export * from './structures/ThreadChannel.js';
 export * from './structures/User.js';
 export * from './structures/UserSelectMenuInteraction.js';
 export * from './structures/VoiceChannel.js';
+
+export * from './types/ClientOptions.js';
+
+export * from './util/InteractionReplyOptions.js';
+export * from './util/BitField.js';
+export * from './util/Permissions.js';
+export * from './util/channelType.js';
+export * from './util/commandType.js';
+export * from './util/componentType.js';
+export * from './util/verifyRequest.js';
