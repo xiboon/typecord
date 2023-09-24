@@ -1,6 +1,7 @@
 import { APIChannel, APIInteraction } from 'discord-api-types/v10';
 import { Permissions } from '../util/Permissions.js';
 import { User } from './User.js';
+import { channelType } from '../util/channelType.js';
 export class Interaction {
     id: string;
     applicationId: string;
@@ -20,7 +21,7 @@ export class Interaction {
         this.data = data.data;
         this.guildId = data.guild_id;
         // @ts-expect-error
-        this.channel = data.channel;
+        this.channel = channelType(data.channel);
         if (data.user || data.member?.user)
             this.user = new User(data.user || data.member?.user);
         this.token = data.token;

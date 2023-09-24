@@ -1,5 +1,6 @@
 export * from './Client.js';
 export * from './structures/Attachment.js';
+export * from './structures/AutocompleteInteraction.js';
 export * from './structures/ButtonInteraction.js';
 export * from './structures/Channel.js';
 export * from './structures/ChannelSelectMenuInteraction.js';
@@ -28,8 +29,8 @@ export * from './structures/VoiceChannel.js';
 
 export * from './types/ClientOptions.js';
 
-export * from './util/InteractionReplyOptions.js';
 export * from './util/BitField.js';
+export * from './util/InteractionReplyOptions.js';
 export * from './util/Permissions.js';
 export * from './util/channelType.js';
 export * from './util/commandType.js';

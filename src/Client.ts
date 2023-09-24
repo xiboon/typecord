@@ -6,6 +6,7 @@ import { verifyRequest } from './util/verifyRequest.js';
 import { commandType } from './util/commandType.js';
 import { componentType } from './util/componentType.js';
 import { ModalInteraction } from './structures/ModalInteraction.js';
+import { AutocompleteInteraction } from './structures/AutocompleteInteraction.js';
 export class Client extends EventEmitter {
     http: FastifyInstance;
     port: number;
@@ -46,6 +47,12 @@ export class Client extends EventEmitter {
                         break;
                     case InteractionType.ModalSubmit:
                         this.emit('modalSubmit', new ModalInteraction(req.body, reply));
+                        break;
+                    case InteractionType.ApplicationCommandAutocomplete:
+                        this.emit(
+                            'autocomplete',
+                            new AutocompleteInteraction(req.body, reply)
+                        );
                 }
             }
         );
