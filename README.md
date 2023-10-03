@@ -11,7 +11,7 @@ Keep in mind, typecord only handles the HTTP interaction part of the bot. You ma
 ## TODO
 - add usage examples to todo
 - documentation
-- attachment support
+- ~~attachment support~~ (impossible with http interactions)
 - other interaction types
 - add all imports to index.ts
 - create-typecord-app cli
